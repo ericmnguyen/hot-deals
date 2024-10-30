@@ -7,7 +7,7 @@ const Movie = require('../models/Movie');
 exports.getAllMovies = async (req, res) => {
 	try {
 		// Fetch all movies from the database
-		const movies = await Movie.find({ });
+		const movies = await Movie.find({ }).limit(10);
 
 		// Respond with the movies data
 		res.status(200).json({
